@@ -1,0 +1,33 @@
+# Java, Maven and IDEs
+target/
+*.class
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# Python caches and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Local run state and logs
+.agent-state/
+*.sqlite
+*.sqlite-*
+*.log
+

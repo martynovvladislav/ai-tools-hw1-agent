@@ -1,0 +1,51 @@
+{
+  "formatVersion": 1,
+  "runId": "previous-run",
+  "goal": "Existing persisted run",
+  "workspace": "WORKSPACE",
+  "status": "EXECUTING",
+  "phase": "EXECUTION",
+  "createdAt": "2026-10-31T00:00:00Z",
+  "updatedAt": "2026-10-31T00:00:01Z",
+  "messages": [
+    {
+      "role": "user",
+      "payloadJson": "{\"content\":\"Existing persisted run\",\"role\":\"user\"}"
+    },
+    {
+      "role": "tool",
+      "payloadJson": "{\"content\":\"{\\\"success\\\":true,\\\"output\\\":{\\\"content\\\":\\\"saved source\\\"},\\\"truncated\\\":false}\",\"role\":\"tool\",\"tool_call_id\":\"read-1\"}"
+    }
+  ],
+  "calls": {
+    "read-1": {
+      "definition": {
+        "toolCallId": "read-1",
+        "name": "read_file",
+        "argumentsJson": "{\"path\":\"order.py\"}",
+        "sideEffect": false,
+        "retrySafe": true
+      },
+      "attempts": [
+        {
+          "number": 1,
+          "status": "SUCCEEDED",
+          "startedAt": "2026-10-31T00:00:00Z",
+          "finishedAt": "2026-10-31T00:00:01Z",
+          "result": {
+            "success": true,
+            "payloadJson": "{\"content\":\"saved source\"}",
+            "truncated": false
+          }
+        }
+      ]
+    }
+  },
+  "decisions": [
+    {
+      "kind": "APPROVE_PLAN",
+      "payloadJson": "{\"approved\":true}",
+      "createdAt": "2026-10-31T00:00:00Z"
+    }
+  ]
+}
